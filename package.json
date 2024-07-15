@@ -1,0 +1,47 @@
+{
+    "name": "bun-vite-canvas-multiplayer",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "concurrently 'vite' 'bun run ./src/core/server.ts'",
+        "dev:debug": "concurrently 'DEBUG=true vite' 'DEBUG=true bun run ./src/core/server.ts'",
+        "bots": "bun run ./src/bots.ts",
+        "build": "tsc -b && vite build",
+        "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "preview": "vite preview",
+        "prepare": "ts-patch install && typia patch"
+    },
+    "dependencies": {
+        "class-variance-authority": "^0.7.0",
+        "clsx": "^2.1.1",
+        "lucide-react": "^0.408.0",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "tailwind-merge": "^2.4.0",
+        "tailwindcss-animate": "^1.0.7",
+        "typia": "^6.5.1"
+    },
+    "devDependencies": {
+        "@ryoppippi/unplugin-typia": "npm:@jsr/ryoppippi__unplugin-typia",
+        "@total-typescript/ts-reset": "^0.5.1",
+        "@types/bun": "^1.1.6",
+        "@types/node": "^20.14.10",
+        "@types/react": "^18.3.3",
+        "@types/react-dom": "^18.3.0",
+        "@typescript-eslint/eslint-plugin": "^7.13.1",
+        "@typescript-eslint/parser": "^7.13.1",
+        "@vitejs/plugin-react-swc": "^3.5.0",
+        "autoprefixer": "^10.4.19",
+        "concurrently": "^8.2.2",
+        "eslint": "^8.57.0",
+        "eslint-plugin-react-hooks": "^4.6.2",
+        "eslint-plugin-react-refresh": "^0.4.7",
+        "postcss": "^8.4.39",
+        "prettier": "^3.3.3",
+        "tailwindcss": "^3.4.5",
+        "ts-patch": "^3.2.1",
+        "typescript": "5.5.2",
+        "vite": "^5.3.1"
+    }
+}
