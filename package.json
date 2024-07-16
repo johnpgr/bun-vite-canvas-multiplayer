@@ -4,6 +4,7 @@
     "version": "0.0.0",
     "type": "module",
     "scripts": {
+        "format": "prettier -w .",
         "dev": "concurrently 'vite' 'bun run ./src/core/server.ts'",
         "dev:debug": "concurrently 'DEBUG=true vite' 'DEBUG=true bun run ./src/core/server.ts'",
         "bots": "bun run ./src/bots.ts",
@@ -18,6 +19,7 @@
         "lucide-react": "^0.408.0",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
+        "recharts": "^2.12.7",
         "tailwind-merge": "^2.4.0",
         "tailwindcss-animate": "^1.0.7",
         "typia": "^6.5.1"

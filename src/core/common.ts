@@ -31,6 +31,10 @@ export interface Timer {
 
 export type Stat = Counter | Average | Timer;
 export type Stats = { [key: string]: Stat };
+export namespace Stats {
+    export const is = typia.createIs<Stats>();
+    export const fromJson = typia.json.createAssertParse<Stats>();
+}
 
 export type Vector2 = { x: number; y: number };
 export type MoveDirection = "north" | "south" | "west" | "east";

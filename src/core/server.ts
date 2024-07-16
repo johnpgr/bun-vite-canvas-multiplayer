@@ -1,5 +1,6 @@
 import typia from "typia";
 import {
+    //@ts-expect-error this is fine
     type Stats,
     type Average,
     type Counter,
